@@ -108,18 +108,19 @@
                        
                     </ul>
                 </div>
-                <div class="form-group entry">
-                   
+                <div class="form-group entry">             
                     <label for="usr">Name:</label>
                     <input type="text" class="form-control" spellcheck="false" id="inp" >
                     <label for="usr">Badge Number:</label>
                     <input type="text" class="form-control" spellcheck="false" id="inp4">
                     <label for="usr">Position:</label>
                     <input type="text" class="form-control" spellcheck="false" id="inp2">
-                    <label for="usr">Department / Office:</label>
+                    <label for="usr">Department:</label>
                     <input type="text" class="form-control" spellcheck="false" id="inp3">
-
+                    <label for="usr">Office:</label>
+                    <input type="text" class="form-control" spellcheck="false" id="inp5">
                 </div>
+            </div>
             </div>
                 
         </div>
@@ -213,12 +214,13 @@
             if(index != 0){
                 ctx.font = "35px BebasNeueRegular";
                 ctx.fillText($('#inp4').val().toUpperCase(), 1300, 175);
-                ctx.font = "50px BebasNeueRegular";
-                ctx.fillStyle = "#0C3A51";
-                ctx.fillText($('#inp2').val().toUpperCase(), 400, 355);
                 ctx.font = "35px BebasNeueRegular";
-                ctx.fillText($('#inp3').val().toUpperCase(), 400, 390);
-                
+                ctx.fillStyle = "#0C3A51";
+                ctx.fillText($('#inp2').val().toUpperCase(), 300, 340);
+                ctx.font = "35px BebasNeueRegular";
+                ctx.fillText($('#inp3').val().toUpperCase(), 300, 370);
+                  ctx.font = "35px BebasNeueRegular";
+                ctx.fillText($('#inp5').val().toUpperCase(), 300, 400);                       
             }
         }
 
@@ -227,6 +229,7 @@
         $('#inp2').on('input', drawText);
         $('#inp3').on('input', drawText);
         $('#inp4').on('input', drawText);
+        $('#inp5').on('input', drawText);
         var image = document.getElementById('canvasImg');
         var canvas = document.getElementById('canvas');
         ctx = canvas.getContext('2d');
