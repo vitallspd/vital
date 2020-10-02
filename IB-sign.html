@@ -85,7 +85,7 @@
             </div>
             <div class="container">
                  <canvas id="canvas" class="canv"> </canvas>
-                <img  id="canvasImg" style="width: 1150px;height: 250px;" src="images/org.png"  alt="">
+                <img  id="canvasImg" style="width: 0px;height: 250px;" src="images/org.png"  alt="">
             </div>
             
             <div class="container">
@@ -105,7 +105,7 @@
                         </li>                    
                     </ul>
                 </div>
-                <div class="form-group entry">             
+               <div class="form-group entry">             
                     <label for="usr">Name:</label>
                     <input type="text" class="form-control" spellcheck="false" id="inp" >
                     <label for="usr">Badge Number:</label>
@@ -116,6 +116,8 @@
                     <input type="text" class="form-control" spellcheck="false" id="inp3">
                     <label for="usr">Office:</label>
                     <input type="text" class="form-control" spellcheck="false" id="inp5">
+                    <label for="usr">Office2:</label>
+                    <input type="text" class="form-control" spellcheck="false" id="inp6">
                 </div>
             </div>
                 
@@ -170,7 +172,7 @@
             var img = document.getElementById("canvasImg");
             canvas.width = 1900;
             canvas.crossOrigin = "Anonymous";
-            canvas.height = 400;
+            canvas.height = 700;
 //            ctx.clearRect(0,0,canvas.width,canvas.height);
             ctx.font = "73px BebasNeueRegular";
             ctx.textAlign = "left";
@@ -210,13 +212,15 @@
             if(index != 0){
                 ctx.font = "35px BebasNeueRegular";
                 ctx.fillText($('#inp4').val().toUpperCase(), 1300, 175);
-                ctx.font = "35px BebasNeueRegular";
+                ctx.font = "50px BebasNeueRegular";
                 ctx.fillStyle = "#0C3A51";
-                ctx.fillText($('#inp2').val().toUpperCase(), 300, 335);
-                ctx.font = "35px BebasNeueRegular";
-                ctx.fillText($('#inp3').val().toUpperCase(), 300, 365);
-                  ctx.font = "35px BebasNeueRegular";
-                ctx.fillText($('#inp5').val().toUpperCase(), 300, 395);                       
+                ctx.fillText($('#inp2').val().toUpperCase(), 300, 350);
+                ctx.font = "50px BebasNeueRegular";
+                ctx.fillText($('#inp3').val().toUpperCase(), 300, 425);
+                  ctx.font = "50px BebasNeueRegular";
+                ctx.fillText($('#inp5').val().toUpperCase(), 300, 500);       
+                  ctx.font = "50px BebasNeueRegular";
+                ctx.fillText($('#inp6').val().toUpperCase(), 300, 575); 
             }
         }
 
@@ -226,6 +230,7 @@
         $('#inp3').on('input', drawText);
         $('#inp4').on('input', drawText);
         $('#inp5').on('input', drawText);
+        $('#inp6').on('input', drawText);
         var image = document.getElementById('canvasImg');
         var canvas = document.getElementById('canvas');
         ctx = canvas.getContext('2d');
