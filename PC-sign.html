@@ -117,9 +117,10 @@
                     <input type="text" class="form-control" spellcheck="false" id="inp4">
                     <label for="usr">Position:</label>
                     <input type="text" class="form-control" spellcheck="false" id="inp2">
-                    <label for="usr">Department / Office:</label>
+                    <label for="usr">Department:</label>
                     <input type="text" class="form-control" spellcheck="false" id="inp3">
-
+                    <label for="usr">Office:</label>
+                    <input type="text" class="form-control" spellcheck="false" id="inp5">
                 </div>
             </div>
                 
@@ -217,9 +218,10 @@
                 ctx.font = "50px BebasNeueRegular";
                 ctx.fillStyle = "#0C3A51";
                 ctx.fillText($('#inp2').val().toUpperCase(), 400, 355);
-                ctx.font = "35px BebasNeueRegular";
-                ctx.fillText($('#inp3').val().toUpperCase(), 400, 390);
-                
+                ctx.font = "50px BebasNeueRegular";
+                ctx.fillText($('#inp3').val().toUpperCase(), 400, 398);
+                  ctx.font = "50px BebasNeueRegular";
+                ctx.fillText($('#inp5').val().toUpperCase(), 400, 435);                       
             }
         }
 
@@ -228,6 +230,7 @@
         $('#inp2').on('input', drawText);
         $('#inp3').on('input', drawText);
         $('#inp4').on('input', drawText);
+        $('#inp5').on('input', drawText);
         var image = document.getElementById('canvasImg');
         var canvas = document.getElementById('canvas');
         ctx = canvas.getContext('2d');
