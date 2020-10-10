@@ -9,7 +9,7 @@
 	<link rel="icon" href="images/favicon.png" type="image">
 	<link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/PC-sign.css">
+	<link rel="stylesheet" href="css/PO-sign.css">
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="js/jquery.js">
     <link rel="stylesheet" media="screen" href="css/font.css" type="text/css"/>
@@ -77,7 +77,7 @@
                     <li><button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
                         <i class="fas fa-align-left"></i>
                     </button></li>
-                    <li><h3>Police Command</h3></li>
+                    <li><h3>Police Officer</h3></li>
                 </ul>
                     
                 </div>
@@ -94,23 +94,22 @@
                     Choose From Here <span class="fa fa-caret-right"></span>
                     </button>
                     <ul class="dropdown-menu" style="background: black">
-                         <li>
-                            <button type="button" class="btn btn-danger" style="width: 100%;margin-top: 5px;" onclick="changeImg('cap');">Captain</button>
+                        <li>
+                            <button type="button" class="btn btn-primary" style="width: 100%;margin-top: 5px;" onclick="changeImg('POIIII');">Police Officer III+1 </button>
+                        </li> 
+                        <li>                  
+                            <button type="button" class="btn btn-primary" style="width: 100%;margin-top: 5px;" onclick="changeImg('PO3');">Police Officer III </button>
+                        </li> 
+
+                        <li>
+                            <button type="button" class="btn btn-primary" style="width: 100%;margin-top: 5px;" onclick="changeImg('PO2');">Police Officer II </button>
                         </li>
                         <li>
-                            <button type="button" class="btn btn-primary" style="width: 100%;margin-top: 5px;" onclick="changeImg('lt');">Lieutenant</button>
-                        </li>
-                        <li>
-                            <button type="button" class="btn btn-danger" style="width: 100%;" onclick="changeImg('Serg2');">Sergeant II</button>
-                        </li>
-                        <li>
-                            <button type="button" class="btn btn-primary" style="width: 100%;margin-top: 5px;" onclick="changeImg('Serg1');">Sergeant I</button>
-                        </li>
-                        <li> 
-                            <a href="PCStyle2.html">Style2</a>
+                            <button type="button" class="btn btn-danger" style="width: 100%;margin-top: 5px;" onclick="changeImg('PO1');">Police Officer I</button>                     
                         </li>
                        
                     </ul>
+                </div>
                <div class="form-group entry">             
                     <label for="usr">Name:</label>
                     <input type="text" class="form-control" spellcheck="false" id="inp" >
@@ -125,6 +124,7 @@
                     <label for="usr">Office2:</label>
                     <input type="text" class="form-control" spellcheck="false" id="inp6">
                 </div>
+            </div>
             </div>
                 
         </div>
@@ -152,23 +152,24 @@
         function changeImg(temp)
         {
             var img = document.getElementById("canvasImg");
-            if(temp == 'cap'){
-                img.src = "images/captain.png";
+             if(temp == 'POIIII'){
+                img.src = "images/POIIII2.png";
                 index = 1;
-            }
-            else if(temp == 'lt'){
-                img.src = "images/lieutenant.png";
+             }
+            else if(temp == 'PO3'){
+                img.src = "images/po32.png";
                 index = 2;
-            }            
-            else if(temp == 'Serg2'){
-                img.src = "images/serg2.png";
+            }
+            else if(temp == 'PO2'){
+                img.src = "images/po22.png";
                 index = 3;
             }
-            else if(temp == 'Serg1'){
-                img.src = "images/serg1.png";
+            else if(temp == 'PO1'){
+                img.src = "images/po12.png";
                 index = 4;
             }
         }
+   
     </script>
     
     <script type="text/javascript">
@@ -190,7 +191,7 @@
             ctx.shadowOffsetX = 0;
             ctx.shadowOffsetY = 4;
             ctx.shadowColor = "rgba(0, 0, 0, 1)";
-            ctx.fillText("Badge No:", 1185, 175);
+            ctx.fillText("Badge No:", 1185, 100);
             ctx.font = "75px BebasNeueRegular";
             ctx.textAlign = "left";
             ctx.fillStyle = "white";
@@ -198,35 +199,41 @@
             ctx.shadowOffsetY = 4;
             ctx.shadowColor = "rgba(0, 0, 0, 1)";
             if(index == 1){
-                ctx.fillText($('#inp').val().toUpperCase(), 400, 190);
+                ctx.fillText($('#inp').val().toUpperCase(), 715, 125);
+                ctx.fillText("PO3+1", 550, 125);
             }
             else if(index == 2){
-                ctx.fillText($('#inp').val().toUpperCase(), 400, 190);
+                ctx.fillText($('#inp').val().toUpperCase(), 650, 125);
+                ctx.fillText("PO3", 550, 125);
             }
             else if(index == 3){
-                ctx.fillText($('#inp').val().toUpperCase(), 400, 190);
+                ctx.fillText($('#inp').val().toUpperCase(), 650, 125);
+                cctx.fillText("PO2", 550, 125);
             }
             else if(index == 4){
-                ctx.fillText($('#inp').val().toUpperCase(), 400, 190);
+                ctx.fillText($('#inp').val().toUpperCase(), 650, 125);
+                ctx.fillText("PO1", 550, 125);
             }
             else if(index == 5){
-                ctx.fillText($('#inp').val().toUpperCase(), 400, 190);
+                ctx.fillText($('#inp').val().toUpperCase(), 650, 125);
+                ctx.fillText("PO3+1", 550, 125);
             }
             else if(index == 6){
-                ctx.fillText($('#inp').val().toUpperCase(), 400, 190);
+                ctx.fillText($('#inp').val().toUpperCase(), 650, 125);
+                ctx.fillText("PO3+1", 550, 125);
             }
             if(index != 0){
                 ctx.font = "35px BebasNeueRegular";
-                ctx.fillText($('#inp4').val().toUpperCase(), 1300, 175);
+                ctx.fillText($('#inp4').val().toUpperCase(), 1300, 100);
                 ctx.font = "50px BebasNeueRegular";
-                ctx.fillStyle = "#0C3A51";
-                ctx.fillText($('#inp2').val().toUpperCase(), 300, 350);
+                ctx.fillStyle = "white";
+                ctx.fillText($('#inp2').val().toUpperCase(), 400, 200);
                 ctx.font = "50px BebasNeueRegular";
-                ctx.fillText($('#inp3').val().toUpperCase(), 300, 400);
+                ctx.fillText($('#inp3').val().toUpperCase(), 400, 250);
                   ctx.font = "50px BebasNeueRegular";
-                ctx.fillText($('#inp5').val().toUpperCase(), 300, 450);       
+                ctx.fillText($('#inp5').val().toUpperCase(), 400, 300);       
                   ctx.font = "50px BebasNeueRegular";
-                ctx.fillText($('#inp6').val().toUpperCase(), 300, 500); 
+                ctx.fillText($('#inp6').val().toUpperCase(), 400, 350); 
             }
         }
 
