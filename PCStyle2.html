@@ -100,13 +100,6 @@
                         <li>
                             <button type="button" class="btn btn-primary" style="width: 100%;margin-top: 5px;" onclick="changeImg('lt');">Lieutenant</button>
                         </li>
-                        <li>
-                            <button type="button" class="btn btn-danger" style="width: 100%;" onclick="changeImg('Serg2');">Sergeant II</button>
-                        </li>
-                        <li>
-                            <button type="button" class="btn btn-primary" style="width: 100%;margin-top: 5px;" onclick="changeImg('Serg1');">Sergeant I</button>
-                        </li>
-
                        
                     </ul>
                <div class="form-group entry">             
@@ -158,14 +151,7 @@
                 img.src = "images/lieutenant2.png";
                 index = 2;
             }            
-            else if(temp == 'Serg2'){
-                img.src = "images/serg22.png";
-                index = 3;
-            }
-            else if(temp == 'Serg1'){
-                img.src = "images/serg12.png";
-                index = 4;
-            }
+
         }
     </script>
     
@@ -202,18 +188,6 @@
             else if(index == 2){
                 ctx.fillText($('#inp').val().toUpperCase(), 650, 125);
                 ctx.fillText("LT.", 550, 125);
-            }
-            else if(index == 3){
-                ctx.fillText($('#inp').val().toUpperCase(), 725, 125);
-                ctx.fillText("Serg II", 550, 125);
-            }
-            else if(index == 4){
-                ctx.fillText($('#inp').val().toUpperCase(), 725, 125);
-                ctx.fillText("Serg I", 550, 125);
-            }
-            else if(index == 5){
-                ctx.fillText($('#inp').val().toUpperCase(), 650, 125);
-                ctx.fillText("Serg I", 550, 125);
             }
             else if(index == 6){
                 ctx.fillText($('#inp').val().toUpperCase(), 650, 125);
