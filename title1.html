@@ -9,7 +9,7 @@
 	<link rel="icon" href="images/favicon.png" type="image">
 	<link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/title.css">
+	<link rel="stylesheet" href="css/title1.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="js/jquery.js">
     <link rel="stylesheet" media="screen" href="css/font1.css" type="text/css"/>
@@ -58,7 +58,7 @@
                     <a href="header.html">Header</a>
                 </li>
                 <li class="active">
-                    <a href="title.html">Title</a>
+                    <a href="title1.html">Title</a>
                 </li>
             </ul>
               <div class="credits">
@@ -86,7 +86,7 @@
             </div>
             <div class="container">
                 <canvas id="canvas" class="canv"> 
-                <img  id="canvasImg" style="width: 1200px;height: 32px;" src="images/title.png"  alt=""></canvas>
+                <img  id="canvasImg" style="width: 1900px;height: 63px;" src="images/title1.png"  alt=""></canvas>
             </div>
             
             <div class="container">
@@ -104,8 +104,8 @@
                     Choose From Here <span class="fa fa-caret-right"></span>
                     </button>
                     <ul class="dropdown-menu" style="background: black">
-                         <li> 
-                            <a href="title1.html">Style2</a>
+                             <li> 
+                            <a href="title.html">Style1</a>
                         </li>
                     </ul>
                 </div>
@@ -139,18 +139,18 @@
             var canvas = document.getElementById('canvas');
             ctx = canvas.getContext('2d');
             var img = document.getElementById('canvasImg');
-            canvas.width = 1200;
+            canvas.width = 1900;
             canvas.crossOrigin = "Anonymous";
-            canvas.height = 32;
+            canvas.height = 63;
 //            ctx.clearRect(0,0,canvas.width,canvas.height);
-            ctx.font = "30px Montserrat";
+            ctx.font = "50px BTBrikRegular";
             ctx.textAlign = "left";
             ctx.drawImage(img, 0, 0);
             ctx.fillStyle = "white";
             ctx.shadowOffsetX = 2.5;
             ctx.shadowOffsetY = 2.5;
             ctx.shadowColor = "rgba(0,0,0,1)";
-            ctx.fillText($('#inp').val().toUpperCase(), 10, 25);
+            ctx.fillText($('#inp').val().toUpperCase(), 25, 50);
         }
 
         $(document).ready(function(){
